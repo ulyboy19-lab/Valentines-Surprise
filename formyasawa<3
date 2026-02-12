@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Asawa 🩷</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffccd5, #ffc2d1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+button {
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6005c;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="loading">
+  <h2>Loading...</h2>
+</div>
+
+<div id="question" class="hidden">
+  <h2>Are you ready to find out what this is about asawa?</h2>
+  <button onclick="showFunny()">Yes</button>
+  <button onclick="showFunny()">Yes, you have no choice</button>
+</div>
+
+<div id="funny" class="hidden">
+  <img src="https://postimg.cc/GBRy0vwZ">
+  <h3>Are you sure?</h3>
+  <button onclick="sadPath()">Yes</button>
+  <button onclick="showMessage()">Yes, of course</button>
+</div>
+
+<div id="sad" class="hidden">
+  <h3>Oh… just “Yes”? Not “Yes, of course”? That’s a little sad 🥺</h3>
+  <h3>Are you really sure?</h3>
+  <button onclick="showMessage()">Yes</button>
+  <button onclick="showMessage()">Yes, of course</button>
+</div>
+
+<div id="message" class="hidden">
+  <h1>Happy Valentine’s Day, Asawa ko 🩷</h1>
+  <p>
+    If you’ve made it this far, it means you chose to continue —
+    just like you chose me every single day.
+  </p>
+  <p>
+    Thank you for being my best friend, my safe place,
+    and my favorite person in the world.
+  </p>
+  <p>
+    I may not always say it perfectly,
+    but I love you more than words can explain.
+  </p>
+  <p>
+    And if I had to choose again…
+    I would still choose you. Every time. 🩷
+  </p>
+</div>
+
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").classList.add("hidden");
+  document.getElementById("question").classList.remove("hidden");
+}, 2000);
+
+function showFunny() {
+  document.getElementById("question").classList.add("hidden");
+  document.getElementById("funny").classList.remove("hidden");
+}
+
+function sadPath() {
+  document.getElementById("funny").classList.add("hidden");
+  document.getElementById("sad").classList.remove("hidden");
+}
+
+function showMessage() {
+  document.getElementById("funny").classList.add("hidden");
+  document.getElementById("sad").classList.add("hidden");
+  document.getElementById("message").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
